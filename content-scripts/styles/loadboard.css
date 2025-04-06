@@ -1,0 +1,369 @@
+/* loadboard.css - Legacy styling for the Load Board based on DAT Power */
+
+/* Reset spacious layout to be more compact */
+body .dat-one-app,
+body .dat-one-container,
+body [data-testid="load-board-container"],
+body .load-board-container,
+body .loads-results-container {
+  font-family: Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: #333 !important;
+}
+
+/* Overall container styling */
+body [data-testid="load-board-container"],
+body .load-board-container,
+body .loads-results-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: #f5f5f5 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Table styling */
+body [data-testid="load-board-container"] table,
+body .load-board-table,
+body .loads-table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+  table-layout: fixed !important;
+  border: 1px solid #ccc !important;
+  font-size: 12px !important;
+}
+
+/* Header row styling */
+body [data-testid="load-board-container"] thead tr,
+body .load-board-table thead tr,
+body .loads-table thead tr {
+  background-color: #e6e6e6 !important;
+  height: 24px !important;
+}
+
+/* Header cell styling */
+body [data-testid="load-board-container"] th,
+body [data-testid="load-board-container"] [role="columnheader"],
+body .load-board-table th,
+body .loads-table th {
+  background-color: #e6e6e6 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  padding: 2px 4px !important;
+  border-right: 1px solid #ccc !important;
+  border-bottom: 1px solid #ccc !important;
+  font-size: 12px !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 10 !important;
+  height: 24px !important;
+  white-space: nowrap !important;
+}
+
+/* Table rows styling */
+body [data-testid="load-board-container"] tbody tr,
+body .load-board-table tbody tr,
+body .loads-table tbody tr {
+  height: 24px !important;
+  border-bottom: 1px solid #ddd !important;
+}
+
+/* Alternating row colors */
+body [data-testid="load-board-container"] tbody tr:nth-child(even),
+body .load-board-table tbody tr:nth-child(even),
+body .loads-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9 !important;
+}
+
+/* Table cell styling */
+body [data-testid="load-board-container"] td,
+body [data-testid="load-board-container"] [role="cell"],
+body .load-board-table td,
+body .loads-table td {
+  padding: 2px 4px !important;
+  border-right: 1px solid #ddd !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-size: 12px !important;
+  height: 24px !important;
+  line-height: 1.2 !important;
+}
+
+/* Strip excessive padding/margin from cells */
+body [data-testid="load-board-container"] td > div,
+body [data-testid="load-board-container"] [role="cell"] > div,
+body .load-board-table td > div,
+body .loads-table td > div {
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 100% !important;
+}
+
+/* Specific column styling */
+/* Age column */
+body [data-testid="load-board-container"] td[data-field="age"],
+body [data-testid="load-board-container"] [role="cell"][data-field="age"],
+body .age-cell {
+  text-align: left !important;
+  font-weight: normal !important;
+}
+
+/* Trip column */
+body [data-testid="load-board-container"] td[data-field="trip"],
+body [data-testid="load-board-container"] [role="cell"][data-field="trip"],
+body .trip-cell {
+  text-align: right !important;
+  color: #0000ff !important; /* Blue for clickable trip numbers */
+}
+
+/* Rate column */
+body [data-testid="load-board-container"] td[data-field="rate"],
+body [data-testid="load-board-container"] [role="cell"][data-field="rate"],
+body .rate-cell {
+  text-align: right !important;
+  font-weight: bold !important;
+}
+
+/* Weight column */
+body [data-testid="load-board-container"] td[data-field="weight"],
+body [data-testid="load-board-container"] [role="cell"][data-field="weight"],
+body .weight-cell {
+  text-align: right !important;
+}
+
+/* Make sure rate per mile is hidden if shown separately */
+body [data-testid="load-board-container"] .rate-per-mile,
+body [data-testid="load-board-container"] [data-testid="rate-per-mile"],
+body .rate-per-mile {
+  display: none !important;
+}
+
+/* Fix header control elements - keep the sort arrows but style them properly */
+body [data-testid="load-board-container"] th button,
+body [data-testid="load-board-container"] [role="columnheader"] button,
+body .load-board-table th button,
+body .loads-table th button {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: bold !important;
+  color: #000 !important;
+  width: auto !important;
+  height: auto !important;
+  display: inline !important;
+}
+
+/* Hide modern filter tags/pills */
+body [data-testid="filter-tags"],
+body .filter-tags,
+body .filter-pills {
+  display: none !important;
+}
+
+/* Style filter inputs to be more compact */
+body [data-testid="load-board-filters"],
+body .load-board-filters,
+body .filter-container {
+  background-color: #e6e6e6 !important;
+  padding: 4px !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+body [data-testid="load-board-filters"] input,
+body [data-testid="load-board-filters"] select,
+body .load-board-filters input,
+body .load-board-filters select,
+body .filter-container input,
+body .filter-container select {
+  height: 22px !important;
+  font-size: 12px !important;
+  padding: 2px 4px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 2px !important;
+}
+
+body [data-testid="load-board-filters"] button,
+body .load-board-filters button,
+body .filter-container button {
+  height: 22px !important;
+  font-size: 12px !important;
+  padding: 2px 8px !important;
+  background-color: #e6e6e6 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 2px !important;
+}
+
+/* Format the expanded panel to be more compact */
+body [data-testid="load-details-panel"],
+body .load-details-panel,
+body .expanded-view {
+  background-color: #f9f9f9 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 0 !important;
+  padding: 8px !important;
+  margin: 0 !important;
+  font-size: 12px !important;
+}
+
+/* Format trip numbers to be blue links as in old UI */
+body [data-testid="trip-number"],
+body .trip-number {
+  color: #0000ff !important;
+  text-decoration: none !important;
+}
+
+/* Format the buttons to look more traditional */
+body [data-testid="book-button"],
+body .book-button {
+  background-color: #e6e6e6 !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 2px !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  height: 22px !important;
+}
+
+/* Style the checkbox to match the old look */
+body [data-testid="select-checkbox"],
+body [type="checkbox"] {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Format the totals row at the top to match old style */
+body [data-testid="results-count"],
+body .results-count,
+body .total-results {
+  background-color: #e6e6e6 !important;
+  padding: 2px 8px !important;
+  border-bottom: 1px solid #ccc !important;
+  font-weight: bold !important;
+  font-size: 12px !important;
+}
+
+/* Style the header options for filterings */
+body [data-testid="filters-section"],
+body .filters-section,
+body .search-options {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 4px !important;
+  background-color: #e6e6e6 !important;
+  border-bottom: 1px solid #ccc !important;
+}
+
+/* Make mileage and weight display with units for clarity */
+body [data-testid="load-board-container"] .miles-value::after,
+body .miles-value::after {
+  content: " mi" !important;
+}
+
+body [data-testid="load-board-container"] .weight-value::after,
+body .weight-value::after {
+  content: " lbs" !important;
+}
+
+/* Make all svgs and icons smaller to match old UI */
+body [data-testid="load-board-container"] svg,
+body .load-board-container svg,
+body .loads-results-container svg {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Style the row selection checkbox like in old UI */
+body [data-testid="load-board-container"] input[type="checkbox"],
+body .load-board-container input[type="checkbox"],
+body .loads-results-container input[type="checkbox"] {
+  appearance: checkbox !important;
+  -webkit-appearance: checkbox !important;
+  width: 14px !important;
+  height: 14px !important;
+  margin: 0 2px !important;
+}
+
+/* Remove any fancy borders, shadows, or rounded corners */
+body [data-testid="load-board-container"] * {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Hide any modern UI elements that don't exist in the old UI */
+body [data-testid="new-feature-badge"],
+body .new-feature-badge,
+body .feature-announcement {
+  display: none !important;
+}
+
+/* Make sure we don't hide any necessary functionality */
+body [data-testid="load-board-container"] button:disabled,
+body .load-board-container button:disabled,
+body .loads-results-container button:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Fix any row hover effects to match old UI */
+body [data-testid="load-board-container"] tr:hover,
+body .load-board-container tr:hover,
+body .loads-results-container tr:hover {
+  background-color: #e0f0ff !important; /* Light blue hover */
+}
+
+/* Style the checkmark/verify icons */
+body [data-testid="load-board-container"] .verified-icon,
+body .verified-icon,
+body [data-testid="load-board-container"] [data-testid="check-icon"],
+body [data-testid="check-icon"] {
+  color: #006600 !important; /* Green checkmark */
+  font-size: 12px !important;
+}
+
+/* Style any tooltips to match old UI */
+body [role="tooltip"],
+body .tooltip {
+  background-color: #ffffcc !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 0 !important;
+  padding: 4px !important;
+  font-size: 12px !important;
+}
+
+/* Make sure pagination controls match old UI */
+body [data-testid="pagination"],
+body .pagination-controls {
+  background-color: #e6e6e6 !important;
+  padding: 4px !important;
+  border-top: 1px solid #ccc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+body [data-testid="pagination"] button,
+body .pagination-controls button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #ccc !important;
+  border-radius: 2px !important;
+  padding: 2px 8px !important;
+  font-size: 12px !important;
+  height: 22px !important;
+}
+
+/* Make sure any loading indicators are styled consistently */
+body [data-testid="loading-indicator"],
+body .loading-indicator {
+  color: #0000ff !important;
+  font-size: 12px !important;
+  padding: 8px !important;
+  text-align: center !important;
+}

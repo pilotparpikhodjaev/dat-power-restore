@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAT Power Legacy UI</title>
+    <style>
+      body {
+        width: 300px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        padding: 12px;
+        margin: 0;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+      }
+
+      .logo {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      h1 {
+        font-size: 16px;
+        margin: 0;
+      }
+
+      .status {
+        margin-bottom: 12px;
+        padding: 8px;
+        background-color: #e6f7ff;
+        border: 1px solid #91d5ff;
+        border-radius: 4px;
+      }
+
+      .status.active {
+        background-color: #e6ffe6;
+        border-color: #b3ffb3;
+      }
+
+      .features {
+        margin-bottom: 12px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .feature label {
+        margin-left: 8px;
+        flex: 1;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 12px;
+        border-top: 1px solid #ccc;
+        padding-top: 12px;
+      }
+
+      button {
+        padding: 6px 12px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0055bb;
+      }
+
+      button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+
+      .version {
+        font-size: 10px;
+        color: #999;
+        text-align: center;
+        margin-top: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="../icons/icon48.png" alt="DAT Power Legacy UI" class="logo" />
+      <h1>DAT Power Legacy UI</h1>
+    </div>
+
+    <div id="status" class="status active">
+      Legacy UI is <strong>active</strong> on this page
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <input type="checkbox" id="toggle-ui" checked />
+        <label for="toggle-ui">Legacy UI</label>
+      </div>
+      <div class="feature">
+        <input type="checkbox" id="auto-refresh" disabled />
+        <label for="auto-refresh">Auto-refresh (coming soon)</label>
+      </div>
+      <div class="feature">
+        <input type="checkbox" id="toll-calculation" disabled />
+        <label for="toll-calculation">Toll Calculation (coming soon)</label>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="refresh-page">Refresh Page</button>
+    </div>
+
+    <div class="version">Version 1.0</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
